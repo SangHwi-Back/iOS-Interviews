@@ -128,6 +128,16 @@ Side table 이 있는 상태라면 deinit 실행 중 약한 참조가 존재하�
 
 FREED 상태는 객체가 해제되었음에도 객체에 대한 Side table 에 약한 참조 카운트가 남아있는 경우이다(약한 참조에 대한 값은 nil). 여기서 약한 참조까지 0이 되면 Side table entry 까지 메모리에서 해제되면서 DEAD 상태가 된다.
 
+## Summary
+
+ARC 는 Swift 에서 메모리 관리를 위해 도입한 메모리 관리 전략이다. 일반적으로 ARC 는 개발자가 메모리 관리에 대한 고려 없이도 프로그래밍을 할 수 있도록 도와준다.
+
+동작방식은 Swift Compiler 가 컴파일 되는 코드에 retain/release 함수를 삽입해주는 것이다. 객체가 실제 사용되기 위해서는 메모리로 load 되어야 하는데, 이를 담당하는 retain, 그리고 load 된 메모리를 해제시켜주는 retain 함수를 내부 알고리즘에 따라 삽입해주는 것이다.
+
+ARC 를 통해 객체의 메모리를 관리할 때는 참조 카운트(Reference Count)를 이용한다. retain 은 참조 카운트를 1 증가, release 는 1 감소시키는데, 참조 카운트가 0이 되면 객체를 해제시키는 방식으로 메모리를 관리한다. Swift Compiler 는 이를 토대로 retain/release 를 적절히 코드 내에 삽입한다.
+
+ARC 가 자동으로 메모리 관리를 해줌에도 이를 알아야 하는 이유는 작업자의 실수 등으로 인한 Reference Cycle 및 Memory Leak 을 발견하고 수정하기 위해서이다.
+
 Reference:
 * [https://developer.apple.com/videos/play/wwdc2021/10216/](https://developer.apple.com/videos/play/wwdc2021/10216/)
 * [https://jeonyeohun.tistory.com/373](https://jeonyeohun.tistory.com/373)
