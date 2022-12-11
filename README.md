@@ -23,6 +23,7 @@ __*해당 질문들이나 주제가 불특정 다수에 의해 공유되는 것�
 | Architecture | ****  | ReactorKit 추천. MVVM 은 개발자/팀 별 해석이 너무 달라서 보류. |
 | LowLevel     | ****  | Swift 기초를 익히는 것을 추천.                         |
 | Concurrency  | ***** | Concurrency 라는 단어를 선택한 이유는 폴더 아래에 상세히 설명.    |
+| Mathematics  | *     | Swift 를 이용해서 여러 수학적 지식을 활용한 알고리즘 구현을 소개.     |
 | ETCs         | ?     | 개발자 채용 시 공통적으로 묻는 질문들을 정리합니다.                |
 
 
@@ -80,6 +81,16 @@ ARC, Compiler 등 Swift 저레벨 지식 관련 질문들을 정리합니다.
 * OperationQueue
 * RxSwift
 * Combine
+
+## Mathematics
+
+일부 기업은 인터뷰 도중 라이브 코딩 테스트를 진행하기도 합니다.
+
+대부분 코딩 테스트 문제를 제공하는 웹사이트의 문제와 비슷한 형태 (예: 별 찍기, 괄호 짝짓기, 룰에 따른 문자열 변환 등) 들이 많은데, 이런 상황에서 많은 도움이 될 것이라고 판단했습니다.
+
+그 외에도 수학적인 지식은 프로그래머에게 여러모로 많은 도움을 (적어도 방해는 되지 않음) 주고 있으므로 참고만 해주시기 바랍니다.
+
+목차는 [Mathematics README](https://github.com/SangHwi-Back/iOS-Interviews/tree/main/Mathematics) 에 나열하도록 하겠습니다.
 
 ## ETCs
 
