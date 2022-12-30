@@ -10,8 +10,8 @@ Memory Leak 의 원인인 '관리되지 않은 메모리' 를 발생시키는 �
 
 메모리 누수에는 주로 다음과 같은 원인이 있지 않은지 점검해볼 필요가 있습니다.
 
-1. ARC 로 메모리가 처리되는 과정에 문제는 없는지. [ARC 에 대한 설명](https://github.com/SangHwi-Back/iOS-Interviews/LowLevel/ARC/AutoReferenceCounting.md)
-2. Reference Count 가 줄어들지 않아 메모리가 계속 해제되지 않은채로 존재하고 있는지. [RC 에 대한 설명](https://github.com/SangHwi-Back/iOS-Interviews/LowLevel/ARC/ReferenceCount.md)
+1. ARC 로 메모리가 처리되는 과정에 문제는 없는지. [ARC 에 대한 설명](./ARC/AutoReferenceCounting.md)
+2. Reference Count 가 줄어들지 않아 메모리가 계속 해제되지 않은채로 존재하고 있는지. [RC 에 대한 설명](./ARC/ReferenceCount.md)
 
 이와 같은 현상들로 인해 메모리가 상승하는 현상은 Xcode 를 이용하면 쉽게 파악이 가능합니다.
 
