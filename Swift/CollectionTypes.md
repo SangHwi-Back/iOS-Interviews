@@ -58,8 +58,10 @@ struct Zedd: Sequence {
 
 Sequence 프로토콜의 기능을 확장한 프로토콜입니다. Sequence 프로토콜의 기능과 더불어 아래와 같은 기능을 추가로 갖습니다.
 
-1. 한 번 방문한 요소를 여러 번 방문할 수 있습니다(nondestructive).
-2. subscript 문법을 이용하여 특정 인덱스에 접근할 수 있습니다.
+1. 한 번 방문한 요소를 여러 번 방문할 수 있다(nondestructive).
+2. subscript 문법을 이용하여 특정 인덱스에 접근할 수 있다.
+
+Collection 의 특이한 점은 한정된 범위만을 갖는다는 것입니다. 한정된 범위를 가짐으로서 Collection 의 Bounds 관련 오류를 방지할 수 있습니다.
 
 Collection 선언부는 다음과 같습니다. 즉, Sequence 를 구현한 객체만이 Collection 구현이 가능합니다.
 
