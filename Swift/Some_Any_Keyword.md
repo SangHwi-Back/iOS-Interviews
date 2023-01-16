@@ -98,7 +98,7 @@ any 키워드는 some 키워드에 의해 고정된 Underlying 타입의 한계�
 
 `[some Animal]`
 
-이 코드는 컴파일 에러를 일으킵니다.
+이 코드는 컴파일 에러를 일으킬 가능성이 있습니다.
 
 `[some Animal]` 은 `Cow`, `Horse`, `Cat` 등 모든 객체를 포함시키고 싶지만 위에서 말한대로 하나의 Underlying 타입으로 고정됩니다.
 
@@ -123,42 +123,6 @@ some, any 키워드 모두 객체에 대한 다형성을 구현한다는 공통�
 두 키워드의 관계는 다음과 같이 나타낼 수 있습니다.
 
 `변수에 any 키워드로 객체 저장 -> some 키워드로 선언된 변수로 옮기기 시도 -> 컴파일러가 any 로 선언된 변수에서 구체 타입을 꺼내 some 키워드 변수로 옮기기`
-
-## some, any 를 이용한 추상화가 필요한 이유
-
-WWDC 의 예시는 동물 객체의 eat 메소드가 비슷한 boiler plate 코드로 구현된다는 점을 들었습니다.
-
-```swift
-// No Abstraction
-struct Farm {
-  func feed(_ animal: Cow) {
-    let alfafa = Hay.grow()
-    let hay = alfalfa.harvest()
-    animal.eat(hay)
-  }
-  
-  func feed(_ animal: Horse) {
-    let root = Carrot.grow()
-    let carrot = root.harvest()
-    animal.eat(carrot)
-  }
-  
-  func feed(_ animal: Chicken) {
-    let wheat = Grain.grow()
-    let grain = wheat.harvest()
-    animal.eat(grain)
-  }
-}
-
-// Admit Abstraction
-struct Farm {
-  func feed(_ animal: some Animal) {
-    let crop = type(of: animal).Feed.grow()
-    let produce = crop.harvest()
-    animal.eat(produce)
-  }
-}
-```
 
 ## Summary
 
