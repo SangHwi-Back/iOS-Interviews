@@ -36,7 +36,7 @@ Reference Cycle 이란 객체의 ref_count 가 줄어들 가능성이 존재하�
 
 Weak/Unowned Reference 된 객체의 생명주기가 끝난 상태에서 객체가 다시 사용될 경우 weak 변수는 nil 을 반환하고, unowned 는 크래쉬가 발생한다. 그래서 실제 객체를 사용할 때 weak 는 Optional Binding, unowned 는 Unowned Optional 로 바꾸고 Optional Binding 을 혼합해서 사용할 수 있다.
 
-하지만 이런 방식으로 weak/unowned 말고도 Memory Leak 을 방지하는 방법은 몇가지 더 있다. 사실 위에서 Binding 을 활용하는 방법은 Silence Bug 를 찾지 못한 채로 프로젝트를 방치할 수 있습니다.
+하지만 이런 방식으로 weak/unowned 말고도 Memory Leak 을 방지하는 방법은 몇가지 더 있다. 사실 위에서 Binding 을 활용하는 방법은 Silence Bug 를 찾지 못한 채로 프로젝트를 방치할 수 있다.
 
 * withExtendedLifetime() 함수를 weak 변수에 대해 사용한다.
 * 코드 내의 Strong/Weak/Unowned 참조를 다시 디자인한다.
@@ -83,7 +83,7 @@ Side Table 이 발생하는 경우는 이 외에도 여러가지 경우가 있�
 
 ---
 
-Weak 참조는 언급한대로 **강한/미소유 참조는 객체를 직접 참조하지만 약한 참조는 객체의 사이드 테이블을 참조한다는 것이다.** 
+약한 참조의 특이한 점은 **강한/미소유 참조처럼 객체를 직접 참조하는 것이 아닌 객체의 사이드 테이블을 참조한다는 것이다.** 
 
 HeapObject 와 SideTable 를 더욱 자세히 알아보도록 하자. RefCount.h 소스코드의 주석에서 객체가 저장되는 형태(Storage Layout) 라고 언급한 주석을 참고하였다.
 
