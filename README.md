@@ -1,5 +1,5 @@
-![https://developer.apple.com/wwdc22/images/hero-p3/hero-medium_2x.jpg](https://developer.apple.com/wwdc22/images/hero-p3/hero-medium_2x.jpg)
-*출처: https://developer.apple.com/wwdc22/ | Copyright © 2022 Apple Inc. 모든 권리 보유.* 
+![https://developer.apple.com/wwdc22/images/hero-p3/hero-medium_2x.jpg](https://devimages-cdn.apple.com/wwdc-services/articles/images/75828E8C-905D-4517-94F8-7799B785D5C7/2048.jpeg)
+*출처: https://developer.apple.com/wwdc22/ | Copyright © 2022 Apple Inc. 모든 권리 보유.*
 
 # iOS-Interviews
 
