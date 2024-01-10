@@ -156,3 +156,4 @@ References:
 * [iOS - RunLoop 란?](https://minosaekki.tistory.com/54)
 * [UIKit rendering - The run loop](https://fabernovel.github.io/2021-01-04/uikit-rendering-part-3)
 * [Timer](https://velog.io/@wansook0316/Timer)
+* [Demystifying iOS Layout](https://tech.gc.com/demystifying-ios-layout/)
